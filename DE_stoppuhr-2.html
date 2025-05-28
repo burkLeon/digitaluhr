@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/DE_apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/DE_favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/DE_favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" -->
+    <!-- thanks to https://favicon.io/ -->
+    <link rel="stylesheet" href='css/neat.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:700,500,300|Roboto+Condensed">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Deine Stoppuhr - Teil 2</title>
+
+  </head>
+
+  <body>
+    <div id="column">
+      <div class="header">
+        <!-- Change header picture and title here --->
+        <a href="http://localhost:4000/"><img class="logo" src="imgs/DE_logoCC.png"></a>
+        <a href="http://localhost:4000/"><div class="title">Coding Club for girls</div></a>
+        <!-- --->
+      </div>
+      <div class="content">
+        
+
+<div class="section-nav">
+  <a href="http://localhost:4000/">Home</a>
+  
+    
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_einfuerung.html">Einfuerung in den Workshop Digitaluhr</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen.html">Variablen</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen-2.html">Variablen verändern</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr.html">Deine Stoppuhr</a>
+      </div>
+    
+  
+
+  <div class="section-sib">&#x21b3; <div class="cur-text">Deine Stoppuhr - Teil 2</div></div>
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_abschluss.html">Abschluss</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-3.html">Deine Stoppuhr - Bonus</a>
+      </div>
+      
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+<table border="0">
+  <tr>
+    <td style="width: 700px;  vertical-align: text-bottom;"> <p>Wenn alles gut gelaufen ist, solltest du jetzt ein Display haben, dass die Sekunden zählt. Ganz zufrieden ist der Hase aber noch nicht, denn die Zeit läuft von alleine los und wird nur auf Null zurückgesetzt, wenn man die Seite neu lädt. "Was ist denn das für eine Stoppuhr, bei der man die Zeit nicht Stoppen kann?" wundert es sich. <br />
+    Das wollen wir nun ändern, indem wir Knöpfe für stop, start und reset hinzufügen. <br />
+    Deinen bisherigen Code für die Uhr findest du auf dieser Seite etwas weiter unten wieder</p></td>
+    <td style="width: 100px;"> </td>
+    <td style="width: 400px;"><img height="300px;" src="imgs/material/rabbitClock (2).png" class="center" /></td>
+  </tr>
+</table>
+
+<h2 id="die-zeit-stoppen">Die Zeit stoppen</h2>
+
+<p class="supplementary"> 
+Füge unter der Zeile <span class="codeblock"> &lt;div id="uhr"&gt; 00:00 &lt;/div&gt; </span> 
+<!-- (und eingebettet im <span class="keyword">center</span> Container, falls du einen eingebaut hast) -->
+einen Knopf mit <span class="keyword">onclick</span> "stop()" und Text "stop" mithilfe folgender Codezeile:
+<br /><span class="codeblock"> &lt;button onclick="stop()"&gt; stop &lt;/button&gt; </span>
+</p>
+
+<p>Dieser code fügt unter unserer Stoppuhr einen Knopf “stop” hinzu, der die Funktion “stop()” aufruft, wenn er angeklickt wird. Vorerst passiert aber noch nichts, wenn du auf den Knopf klickst, denn wir haben die Funktion “stop()” dem Computer noch nicht gegeben.</p>
+
+<p class="supplementary"> 
+Füge unter der Zeile <span class="codeblock"> var min = 0; </span> eine Variable hinzu mit Namen "lauft" und Anfangswert "false".
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    "lauft" ist genauso wie die Zahl Null ein gültiger anfangswert, du kannst also die gleiche Methode wie sonst benutzen:
+    <span class="codeblock"> var [Name] = [Wert];</span> <br />
+</details>
+
+<p>Diese Variable soll speichern, ob die Zeit unserer Stoppuhr gerade läuft (dann ist lauft “true”, oder wahr) oder nicht (dann ist lauft “false”, oder falsch).</p>
+
+<p class="supplementary"> 
+Füge unter der Funktion Stoppuhr eine Funktion hinzu mit Namen stop(), die lauft auf "false" setzt. Lasse dich dabei von dem Aufbau der Funktion stoppuhr() inspirieren.
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Die Funktion stop sollte folgendes Format haben: <br />
+    <span class="codeblock"> function stop(){ <br /> [hier kommt der Befehl um lauft auf "false" zu setzen] <br /> } </span> <br />
+    Achte darauf, dass deine Funktion stop() wirklich ausserhalb der { } Klammern der Funktion stoppuhr() ist.
+</details>
+
+<p class="supplementary"> 
+Setze den ganzen Inhalt zwischen den { } Klammern der Funktion stoppuhr() in einem Block der nur dann ausgeführt wird, wenn lauft true ist. <br />
+Du kannst dich dafür an der Aufgabe <a href="DE_stoppuhr.html#stoppuhr-minuten">Sekunden zu Minuten</a> orientieren und folgenden Code benutzen: <br />
+<span class="codeblock"> if (lauft == true){ <br /> } </span> <br />
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Die Funktion stoppuhr() sollte jetzt so aussehen: <br />
+    <span class="codeblock"> 
+    function stoppuhr(){ <br /> 
+    <p style="text-indent: 20px; margin-bottom: -2em;">if(lauft==true){ </p> <br /> 
+    <p style="text-indent: 40px; margin-bottom: -2em;">sec = sec+1; </p><br /> 
+    <p style="text-indent: 40px; margin-bottom: -2em;">... </p><br /> 
+    <p style="text-indent: 20px; margin-bottom: -2em;">} </p><br /> 
+    } </span> <br />
+</details>
+
+<p>Probiere dein Programm aus. Wenn alles gut gelaufen ist sollte jetzt die Zeit stoppen, sobald du auf den Stop-Knopf drückst.</p>
+
+<iframe src="https://trinket.io/embed/html/88ead22bf8e0" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+<h2 id="die-zeit-starten">Die Zeit starten</h2>
+
+<p>Nun haben wir es geschafft, die Zeit zu stoppen. Aber wie bringen wir sie wieder zum laufen? <br />
+Dafür brauchen wir ganz einfach einen start-Knopf mit einer start() Funktion, die die Zeit wieder zum laufen bringt.</p>
+
+<p class="supplementary"> 
+Füge direkt über der Zeile <span class="codeblock"> &lt;button onclick="stop()"&gt; stop &lt;/button&gt; </span> einen Knopf mit <span class="keyword">onclick</span> "start()" und Text "start".
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Inspiriere dich an der Zeile <span class="codeblock"> &lt;button onclick="stop()"&gt; stop &lt;/button&gt; </span> und ersetze einfach überall "stop" durch "start".
+</details>
+
+<p>Damit dieser Knopf auch etwas bewirkt, müssen wir wie beim stop-Knopf die Funktion dazu programmieren.</p>
+
+<p class="supplementary"> 
+Definiere direkt unter der Funktion stop() eine Funktion start(), die <br />
+1. kontrolliert ob lauft den Wert false hat, und falls ja <br />
+2. lauft auf true setzt und <br />
+3. die stoppuhr Funktion startet mit der Zeile <span class="codeblock"> stoppuhr(); </span>
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Die Funktion start() sollte jetzt so aussehen: <br />
+    <span class="codeblock"> 
+    function start(){ <br /> 
+    <p style="text-indent: 20px; margin-bottom: -2em;">if(lauft==false){ </p> <br /> 
+    <p style="text-indent: 40px; margin-bottom: -2em;">läuft = true; </p><br /> 
+    <p style="text-indent: 40px; margin-bottom: -2em">stoppuhr();</p><br /> 
+    <p style="text-indent: 20px; margin-bottom: -2em">} </p><br /> 
+    } </span> <br />
+</details>
+
+<h2 id="die-zeit-zurücksetzen">Die Zeit zurücksetzen</h2>
+
+<p>Wenn du willst, kannst du noch einen zusätzlichen Knopf hinzufügen, der die Zeit wieder auf Null stellt, bevor du auf der nächsten Seite weitermachst.</p>
+<p class="supplementary"> 
+Füge direkt unter der Zeile <span class="codeblock"> &lt;button onclick="stop()"&gt; stop &lt;/button&gt; </span> einen Knopf mit <span class="keyword">onclick</span> "reset()" und Text "reset".
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Inspiriere dich an der Zeile <span class="codeblock"> &lt;button onclick="stop()"&gt; stop &lt;/button&gt; </span> und ersetze einfach überall "stop" durch "reset".
+</details>
+
+<p class="supplementary"> 
+Definiere direkt unter der Funktion start() eine Funktion reset(), die <br />
+1. beide Variablen <span class="keyword">min</span> und <span class="keyword">sec </span> auf Null stellt, <br />
+2. lauft auf false setzt, und <br />
+3. die angezeigte Zeit mit folgender Zeile aktualisiert : <span class="codeblock">document.getElementById("uhr").innerHTML = min +":" + sec; </span>.
+</p>
+
+
+
+<div class="tutorial-nav">
+  
+  
+  
+    
+    <div class="previous">Previous: <a href="DE_stoppuhr.html">
+    Deine Stoppuhr</a></div>
+  
+
+  
+    
+    <div class="next">Next: <a href="DE_abschluss.html">
+    Abschluss</a></div>
+  
+</div>
+
+<div class="footer">
+  Prosa und Code sind von <a rel="author" href="https://www.epfl.ch/education/education-and-science-outreach/fr/promotion-des-sciences/">SPS EPFL</a> unter der Lizenz <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">CC BY-NC-ND 4.0 License</a>. Code und Konzept inspiriert von <a href="https://selectstarsql.com/">SelectStarSQL</a>. Gehostet auf <a href="https://github.com/megretj/atelierSQL">Github Pages</a>. Fonts made from <a href="http://www.onlinewebfonts.com">Web Fonts</a> is licensed by CC BY 4.0
+  <!-- under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>. Code and data are released into the public domain under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>. -->
+</div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+    <script src="scripts/autorefresh.js"></script>
+    <script src="scripts/main_de.js"></script>
+  </body>
+</html>

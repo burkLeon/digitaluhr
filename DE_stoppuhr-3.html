@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/DE_apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/DE_favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/DE_favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" -->
+    <!-- thanks to https://favicon.io/ -->
+    <link rel="stylesheet" href='css/neat.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:700,500,300|Roboto+Condensed">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Deine Stoppuhr - Bonus</title>
+
+  </head>
+
+  <body>
+    <div id="column">
+      <div class="header">
+        <!-- Change header picture and title here --->
+        <a href="http://localhost:4000/"><img class="logo" src="imgs/DE_logoCC.png"></a>
+        <a href="http://localhost:4000/"><div class="title">Coding Club for girls</div></a>
+        <!-- --->
+      </div>
+      <div class="content">
+        
+
+<div class="section-nav">
+  <a href="http://localhost:4000/">Home</a>
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen.html">Variablen</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen-2.html">Variablen verändern</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr.html">Deine Stoppuhr</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-2.html">Deine Stoppuhr - Teil 2</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_abschluss.html">Abschluss</a>
+      </div>
+    
+  
+
+  <div class="section-sib">&#x21b3; <div class="cur-text">Deine Stoppuhr - Bonus</div></div>
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</div>
+
+<h1 id="deine-stoppuhr---bonus">Deine Stoppuhr - Bonus</h1>
+
+<p>Hier sind ein paar Ideen, wie du deine Stoppuhr noch verbessern könntest. Wenn du selber noch Ideen hast, kannst du gerne mithilfe des Coding Club Teams versuchen, sie umzusetzen.</p>
+
+<div class="warning"> Vergesse nicht, nach deinen Änderungen dein Programm neu herunterzuladen ! </div>
+
+<iframe src="https://trinket.io/embed/html/88ead22bf8e0" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+<h2 id="immer-zwei-ziffern-anzeigen">Immer zwei Ziffern anzeigen</h2>
+
+<p>Im Moment zeigt die Uhr nur dann zwei Ziffern anm wenn es nötig ist. Wie du programmieren kannst, dass die uhr statt “3:9” lieber “03:09” anzeigt, erklären wir hier.</p>
+
+<p>Wir schreibe dafür zuerst eine Funktion, die zum Beispiel “9” durch “09” ersetzt.</p>
+
+<p class="supplementary"> 
+Schreibe unter der Funktion <span class="codeblock">stop()</span> eine Funktion <span class="codeblock">formatUhr(i)</span>, die kontrolliert ob i kleiner als 10 ist und falls ja eine Null davor setzt. <br />
+Zum Schluss spuckt die Funktion diese modifizierte Version von i zurück. Schreibe dafür als letzte Zeile <span class="codeblock">return i;</span>
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Kontrollieren ob i kleiner als 10 ist kann man mit <br />
+    <span class="codeblock">if (i &lt; 10) {<br /> }</span><br />
+    Eine Null vor i setzten kann man mit der Zeile
+    <span class="codeblock"> i = "0" + i; </span>
+</details>
+
+<p>Nun wollen wir immer bevor wir die Uhr anzeigen das Format aktualisieren.</p>
+<p class="supplementary">
+Finde dafür alle Stellen in deinem Code an denen <span class="codeblock"> document.getElementById("uhr").innerHTML = min +":" + sec; </span> vorkommt und ersetze diese Zeile durch die drei Zeilen
+<span class="codeblock"> minString = formatUhr(min); <br />
+    secString = formatUhr(sec); <br />
+    document.getElementById("uhr").innerHTML = minString +":" + secString; </span>
+</p>
+
+<h2 id="eine-schöne-schrift">Eine Schöne Schrift</h2>
+
+<p>Bis jetzt wird deine Uhr nur in sehr simpler Schrift und ganz klein angezeigt. In diesem Abschnitt geben wir dir die Möglichkeit, deine Uhr etwas schöner zu gestalten.</p>
+
+<p class="supplementary">
+Füge dafür direkt ganz oben unter der zweiten Zeile deines Programms (<span class="codeblock"> &lt;html&gt; </span>) folgenden Codeblock ein:<br />
+<span class="codeblock"> 
+    &lt;head&gt; <br />
+    &lt;meta charset="UTF-8"&gt; <br />
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <br />
+    &lt;title&gt;Mein Stoppuhr&lt;/title&gt; <br />
+    &lt;style&gt; <br />
+        #uhr { <br />
+            font-size: 2em; <br />
+            margin: 20px; <br />
+            font-family: monospace; <br />
+             <br />
+        } <br />
+        button { <br />
+            font-size: 1em; <br />
+            padding: 10px 20px; <br />
+            cursor: pointer; <br />
+            font-family: system-ui; <br />
+        } <br />
+    &lt;/style&gt; <br />
+&lt;/head&gt; 
+</span><br />
+
+Was passiert wenn du die verschiedenen Zahlen die vor "px" oder "em" vorkommen veränderst? Kannst du herausfinden welche Zahl was verändert? Schaffst du es dein Uhr zentriert auf dem Bildschirm anzuzeigen?<br />
+Zusätzlich kannst du die Schriftart verändern, indem du das Wort hinter <span class="codeblock"> font-family: </span> durch einen der Folgenden Liste ersetzt:
+</p>
+<center>
+<table border="0">
+<tr>
+    <td style="width: 200px;"> <p> Arial </p> </td>
+    <td style="width: 200px;"> <p> Times </p> </td>
+    <td style="width: 200px;"> <p> Trebuchet MS </p> </td>
+</tr>
+<tr>
+    <td style="width: 200px;"> <p> Georgia </p> </td>
+    <td style="width: 200px;"> <p> Garamond </p> </td>
+    <td style="width: 200px;"> <p> comic sans MS </p> </td>
+</tr>
+<tr>
+    <td style="width: 200px;"> <p> Verdana </p> </td>
+    <td style="width: 200px;"> <p> Courier </p> </td>
+    <td style="width: 200px;"> <p> Courier New </p> </td>
+</tr>
+<tr>
+    <td style="width: 200px;"> <p> Lucida </p> </td>
+    <td style="width: 200px;"> <p> Helvetica </p> </td>
+    <td style="width: 200px;"> <p> Brush Script MT </p> </td>
+</tr>
+<tr>
+    <td style="width: 200px;"> <p> Impact </p> </td>
+    <td style="width: 200px;"> <p> Tahoma </p> </td>
+    <td style="width: 200px;"> <p>  </p> </td>
+</tr>
+</table>
+</center>
+
+
+
+<div class="tutorial-nav">
+  
+  
+  
+    
+    <div class="previous">Previous: <a href="DE_abschluss.html">
+    Abschluss</a></div>
+  
+
+  
+</div>
+
+<div class="footer">
+  Prosa und Code sind von <a rel="author" href="https://www.epfl.ch/education/education-and-science-outreach/fr/promotion-des-sciences/">SPS EPFL</a> unter der Lizenz <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">CC BY-NC-ND 4.0 License</a>. Code und Konzept inspiriert von <a href="https://selectstarsql.com/">SelectStarSQL</a>. Gehostet auf <a href="https://github.com/megretj/atelierSQL">Github Pages</a>. Fonts made from <a href="http://www.onlinewebfonts.com">Web Fonts</a> is licensed by CC BY 4.0
+  <!-- under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>. Code and data are released into the public domain under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>. -->
+</div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+    <script src="scripts/autorefresh.js"></script>
+    <script src="scripts/main_de.js"></script>
+  </body>
+</html>

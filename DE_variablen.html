@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/DE_apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/DE_favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/DE_favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" -->
+    <!-- thanks to https://favicon.io/ -->
+    <link rel="stylesheet" href='css/neat.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:700,500,300|Roboto+Condensed">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Variablen</title>
+
+  </head>
+
+  <body>
+    <div id="column">
+      <div class="header">
+        <!-- Change header picture and title here --->
+        <a href="http://localhost:4000/"><img class="logo" src="imgs/DE_logoCC.png"></a>
+        <a href="http://localhost:4000/"><div class="title">Coding Club for girls</div></a>
+        <!-- --->
+      </div>
+      <div class="content">
+        
+
+<div class="section-nav">
+  <a href="http://localhost:4000/">Home</a>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_einfuerung.html">Einfuerung in den Workshop Digitaluhr</a>
+      </div>
+    
+  
+
+  <div class="section-sib">&#x21b3; <div class="cur-text">Variablen</div></div>
+
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen-2.html">Variablen verändern</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr.html">Deine Stoppuhr</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-2.html">Deine Stoppuhr - Teil 2</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_abschluss.html">Abschluss</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-3.html">Deine Stoppuhr - Bonus</a>
+      </div>
+      
+    
+  
+</div>
+
+<h1 id="variablen">Variablen</h1>
+
+<table border="0">
+  <tr>
+    <td style="width: 300px;"><img height="250px;" src="imgs/material/rabbitClock (6).png" class="center" /></td>
+    <td style="width: 10px;"> </td>
+    <td style="width: 400;  vertical-align: text-bottom;"> <p>Deine Uhrzeit muss in deinem Programm gespeichert werden. Dafür braucht es Variablen. Das sind wie Schubladen, um Infos zu speichern. Wir haben dir wieder ein paar Aufgaben vorbereitet, die du direkt in der Box hier lösen kannst. <br />
+    Zwischen den grünen Linien im oberen Abschnitt gibt es einen Teil für den Text-Inhalt und im unteren einen Teil für dein Code. Achte gut darauf, was wohin kommt! </p></td>
+    <td style="width: 10px;"> </td>
+    <td style="width: 300px;"><img height="250px;" src="imgs/material/rabbitClock (6).png" class="center" /></td>
+  </tr>
+</table>
+
+<iframe src="https://trinket.io/embed/html/e0da04411b99" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+<h2 id="den-namen-merken">Den Namen merken</h2>
+
+<p>Eine Variable kann zum Beispiel einen Namen speichern.</p>
+
+<p class="supplementary"> 
+Schreibe im Inhalt einen ersten <span class="keyword">div</span>-Container mit dem Text "Mein Name ist:" und einen zweiten <span class="keyword">div</span>-Container mit dem Text "???". <br />
+Den zweiten Container wollen später noch verändern. Darum geben wir ihm eine <span class="keyword">id</span> indem wir im Start-Tag ein id="name" hinzufügen: <br />
+<span class="codeblock"> &lt;div id="name"&gt; ??? &lt;/div&gt; </span><br />
+<!-- </p>
+<p class="supplementary">  -->
+Jetzt können wir im Code-Teil unten eine Variable erstellen. Schreibe im Code-Abschnitt die Zeile: <br />
+<span class="codeblock"> var meinName = Sophie; </span><br />
+Die drei Fragezeichen können wir dank der id jetzt mit der Variable ersetzen. Schreibe im Code-Abschnitt die Zeile: 
+<span class="codeblock"> document.getElementById("name").innerHTML = meinName; </span><br />
+Jetzt steht auf der Webseite rechts "Sophie" statt "???" ! Versuche im Code "Sophie" durch deinen Namen zu ersetzen. Was passiert?
+</p>
+
+<p>Dank der id können wir mit unserem Programm auf den Inhalt unserer Webseite zugreifen und ihn verändern. Das wird für unsere Uhr sehr wichtig! Dafür brauchen wir auch variablen, wie hier “name”. <br />
+Variablen werden immer gleich definiert:</p>
+
+<p class="warning"> Variablen werden immer so definiert: <span class="codeblock"> var [NameDerVariable] = [Startwert]; </span></p>
+
+<h2 id="die-uhrzeit-wissen">Die Uhrzeit wissen</h2>
+
+<table border="0">
+  <tr>
+    <td style="width: 200;  vertical-align: text-bottom;"> <p><br />Jetzt können wir die allererste Version unserer Digitaluhr programmieren. Und es wird Zeit! Der Hase verliert schon die Hoffnung, also los geht's! <br />
+    Du kannst die vier Zeilen die du davor programmiert hast löschen oder einfach darunter weitermachen. <br /> 
+    Lasse dich vom Code für den Namen inspirieren um die Uhr zu programmieren. Es ist recht ähnlich. </p></td>
+    <td style="width: 10px;"> </td>
+    <td style="width: 400px;"><img height="250px;" src="imgs/material/rabbitClock (1).png" class="center" /></td>
+    <td style="width: 200px;"> </td>
+  </tr>
+</table>
+
+<p class="supplementary"> 
+    1. Erstelle im Inhalt einen <span class="keyword">div</span>-Container mit dem Text "00:00" und id "uhr". <br />
+    2. Erstelle im Code eine Variable "stunde" und eine Variable "minute" und setze sie auf die aktuelle Uhrzeit. <br />
+    3. Schreibe im Code folgende Zeilen um die angezeigte Uhrzeit mit deinen Variablen zu füllen: <br />
+        <span class="codeblock"> document.getElementById("uhr").innerHTML = stunde + ":" + minute; </span>
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    1. Benutze folgende Zeile im Inhalt Teil:<br />
+    <span class="codeblock"> &lt;div id="uhr"&gt; 00:00 &lt;/div&gt; </span><br />
+    2.Schreibe im Code Teil. Dein Code könnte so aussehen<br />
+    <span class="codeblock"> var stunde = 11; <br /> var minute = 36; </span><br />
+</details>
+
+
+<div class="tutorial-nav">
+  
+  
+  
+    
+    <div class="previous">Previous: <a href="DE_einfuerung.html">
+    Einfuerung in den Workshop Digitaluhr</a></div>
+  
+
+  
+    
+    <div class="next">Next: <a href="DE_variablen-2.html">
+    Variablen verändern</a></div>
+  
+</div>
+
+<div class="footer">
+  Prosa und Code sind von <a rel="author" href="https://www.epfl.ch/education/education-and-science-outreach/fr/promotion-des-sciences/">SPS EPFL</a> unter der Lizenz <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">CC BY-NC-ND 4.0 License</a>. Code und Konzept inspiriert von <a href="https://selectstarsql.com/">SelectStarSQL</a>. Gehostet auf <a href="https://github.com/megretj/atelierSQL">Github Pages</a>. Fonts made from <a href="http://www.onlinewebfonts.com">Web Fonts</a> is licensed by CC BY 4.0
+  <!-- under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>. Code and data are released into the public domain under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>. -->
+</div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+    <script src="scripts/autorefresh.js"></script>
+    <script src="scripts/main_de.js"></script>
+  </body>
+</html>

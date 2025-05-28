@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/DE_apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/DE_favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/DE_favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="manifest" href="/site.webmanifest">
+    <!--link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" -->
+    <!-- thanks to https://favicon.io/ -->
+    <link rel="stylesheet" href='css/neat.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:700,500,300|Roboto+Condensed">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Deine Stoppuhr</title>
+
+  </head>
+
+  <body>
+    <div id="column">
+      <div class="header">
+        <!-- Change header picture and title here --->
+        <a href="http://localhost:4000/"><img class="logo" src="imgs/DE_logoCC.png"></a>
+        <a href="http://localhost:4000/"><div class="title">Coding Club for girls</div></a>
+        <!-- --->
+      </div>
+      <div class="content">
+        
+
+<div class="section-nav">
+  <a href="http://localhost:4000/">Home</a>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_einfuerung.html">Einfuerung in den Workshop Digitaluhr</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen.html">Variablen</a>
+      </div>
+    
+  
+    
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_variablen-2.html">Variablen verändern</a>
+      </div>
+    
+  
+
+  <div class="section-sib">&#x21b3; <div class="cur-text">Deine Stoppuhr</div></div>
+
+  
+    
+  
+    
+  
+    
+  
+    
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-2.html">Deine Stoppuhr - Teil 2</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_abschluss.html">Abschluss</a>
+      </div>
+      
+    
+  
+    
+      
+      <div class="section-sib">
+        &#x21b3; <a href="DE_stoppuhr-3.html">Deine Stoppuhr - Bonus</a>
+      </div>
+      
+    
+  
+    
+  
+    
+  
+</div>
+
+<h1 id="nun-ist-es-an-der-zeit">Nun ist es an der Zeit!</h1>
+
+<table border="0">
+  <tr>
+    <td style="width: 300px;"> <img height="200px;" src="imgs/material/rabbitClock (4).png" class="center" /></td>
+    <td style="width: 600px;  vertical-align: text-bottom;"> <p>Mit dem Wissen, das du bis hier angesammelt hast, kannst du jetzt eine Stoppuhr für den Hasen zu Programmieren. Und es wird Zeit ! Der Hase bekommt schon langsam angst, zu spät beim Ball der Königin aufzutauchen. <br />
+    Im Codeblock unten wollen wir die Stoppuhr programmieren.</p></td>
+    <td style="width: 300px;"><img height="200px;" src="imgs/material/rabbitClock (4).png" class="center" /></td>
+  </tr>
+</table>
+
+<p><a name="stoppuhr-display"></a></p>
+<h2 id="das-display">Das Display</h2>
+
+<p class="supplementary"> 
+Beginne damit, das Display für unsere Stoppuhr einzubauen. Erstelle dafür in der Zeile direkt unter<br />
+<span class="codeblock"> &lt;!-- Ab hier kommt der angezeigte Inhalt --&gt; </span><br />
+einen <span class="keyword">div-Container</span> mit <span class="keyword">id</span> "uhr" zu erstellen, die den Text "00:00" anzeigt. Schaffst du es zusätzlich diesen Container zentriert auf der Webseite anzuzeigen? 
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Um den Text anzuzeigen solltest du folgende Codezeile an der erwähnten Stelle hinzugefügt haben:<br />
+    <span class="codeblock"> &lt;div id="uhr"&gt; 00:00 &lt;/div&gt; </span><br />
+    Um diese in der Mitte der Webseite anzuzeigen, kannst du diese Zeile in einem <span class="keyword"> center</span> Container einbetten.
+</details>
+
+<iframe src="https://trinket.io/embed/html/88ead22bf8e0" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
+
+<p><a name="stoppuhr-variablen"></a></p>
+<h2 id="die-variablen">Die Variablen</h2>
+<p>Diese angezeigte Uhr wollen wir mit Variablen zum Leben bringen, damit sie auch gut die Zeit stoppen kann.</p>
+
+<p class="supplementary"> 
+definiere unter der Zeile
+<span class="codeblock">// Ab hier kommt der Code für die Uhr //</span> 
+eine Variable <span class="keyword"> sec </span>, die als Anfangswert die Zahl 0 hat. Diese Variable wird die Sekunden zählen. Füge auch eine Variable <span class="keyword"> min </span> mit Wert 0 hinzu, die die Minuten zählt. 
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Erinnere dich daran, dass Variablen mit
+    <br /><span class="codeblock"> var [Name] = [Wert];</span> <br />
+    definiert, wo [Name] der Name der Variable ist und [Wert] ihr Anfangswert.
+</details>
+
+<p><a name="stoppuhr-sekunden"></a></p>
+<h2 id="tick-tick-tick">Tick, Tick, Tick…</h2>
+
+<p>Das Funktionieren der Stoppuhr ist im Code zwischen den Klammern <span class="code">{</span> und <span class="code">}</span> bei der Zeile <span class="codeblock"> function stoppuhr() </span> geregelt.</p>
+
+<p class="supplementary"> 
+Füge zwischen den Klammern { } drei Zeilen in folgender Reihenfolge ein.
+<br /> 1. Eine Zeile, um den Wert von der Variable <span class="keyword"> sec </span> um 1 zu erhöhen;
+<br /> 2. Eine Zeile, die den angezeigten Wert zu updaten, und zwar:<br />
+<span class="codeblock">document.getElementById("uhr").innerHTML = min +":" + sec; </span>
+<br /> 3. Eine Zeile, um eine Sekunde zu warten, bevor das Programm erneut abgerufen wird: <br />
+<span class="codeblock">setTimeout(stoppuhr, 1000);</span>
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Den Wert von <span class="keyword"> sec </span> kannst du mit folgendem Code um 1 erhöhen:
+    <br /><span class="codeblock"> sec = sec + 1;</span> <br />
+    oder
+    <br /><span class="codeblock"> ++sec; </span> <br />
+</details>
+
+<p>Nun läuft unsere Stoppuhr von ganz alleine !! Das Aussehen ist vielleicht noch nicht ganz das erwünschte, aber darum kümmern wir uns später.</p>
+
+<p><a name="stoppuhr-minuten"></a></p>
+<h2 id="sekunden-zu-minuten">Sekunden zu Minuten</h2>
+
+<p>60 Sekunden sind eine Minute. Das weiss jedes Kind, nur unser Programm noch nicht. Wenn du die Stoppuhr laufen lässt, zählt sie nach 60 einfach weiter mit 61, 62, 63, und so weiter. Das wollen wir nun ändern, und dem Programm sagen, dass 60 Sekunden eine Minute ist.</p>
+
+<p class="supplementary"> 
+Füge unter der Zeile, die die Sekunden um 1 erhöht einen neuen Codeblock ein. Dieser sollte kontrollieren, ob 60 Sekunden vergangen sind, und falls ja die Minutenanzahl <span class="keyword"> min </span> um eins erhöhen und <span class="keyword"> sec </span> wieder auf null zurücksetzen. Benutze dafür den Codeblock
+<br /><span class="codeblock">if (sec == 60){ <br /><br /> } </span> <br />
+dessen Inhalt in den { } Klammern nur dann ausgeführt wird, wenn <span class="keyword"> sec </span> gleich 60 ist.
+</p>
+<details>
+    <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
+    Die Minuten kann man auf der gleichen Art und Weise um 1 erhöhen wie die Sekunden. Um <span class="keyword"> sec </span> auf Null zu setzen benutzen wir <span class="codeblock">sec = 0; </span>. Frage eine Assistentin oder einen Assistenten falls du mehr Hilfe brauchst.
+</details>
+
+
+
+<div class="tutorial-nav">
+  
+  
+  
+    
+    <div class="previous">Previous: <a href="DE_variablen-2.html">
+    Variablen verändern</a></div>
+  
+
+  
+    
+    <div class="next">Next: <a href="DE_stoppuhr-2.html">
+    Deine Stoppuhr - Teil 2</a></div>
+  
+</div>
+
+<div class="footer">
+  Prosa und Code sind von <a rel="author" href="https://www.epfl.ch/education/education-and-science-outreach/fr/promotion-des-sciences/">SPS EPFL</a> unter der Lizenz <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr">CC BY-NC-ND 4.0 License</a>. Code und Konzept inspiriert von <a href="https://selectstarsql.com/">SelectStarSQL</a>. Gehostet auf <a href="https://github.com/megretj/atelierSQL">Github Pages</a>. Fonts made from <a href="http://www.onlinewebfonts.com">Web Fonts</a> is licensed by CC BY 4.0
+  <!-- under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons BY-SA 4.0 License</a>. Code and data are released into the public domain under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 License</a>. -->
+</div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+    <script src="scripts/autorefresh.js"></script>
+    <script src="scripts/main_de.js"></script>
+  </body>
+</html>
