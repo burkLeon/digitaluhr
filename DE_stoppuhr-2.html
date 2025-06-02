@@ -134,7 +134,7 @@ einen Knopf mit <span class="keyword">onclick</span> "stop()" und Text "stop" mi
 <p>Dieser code fügt unter unserer Stoppuhr einen Knopf “stop” hinzu, der die Funktion “stop()” aufruft, wenn er angeklickt wird. Vorerst passiert aber noch nichts, wenn du auf den Knopf klickst, denn wir haben die Funktion “stop()” dem Computer noch nicht gegeben.</p>
 
 <p class="supplementary"> 
-Füge unter der Zeile <span class="codeblock"> var min = 0; </span> eine Variable hinzu mit Namen "lauft" und Anfangswert "false".
+Füge unter der Zeile <span class="codeblock"> var min = 0; </span> eine Variable hinzu mit Namen "lauft" und Anfangswert <span class="codeblock"> false </span>.
 </p>
 <details>
     <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
@@ -145,7 +145,8 @@ Füge unter der Zeile <span class="codeblock"> var min = 0; </span> eine Variabl
 <p>Diese Variable soll speichern, ob die Zeit unserer Stoppuhr gerade läuft (dann ist lauft “true”, oder wahr) oder nicht (dann ist lauft “false”, oder falsch).</p>
 
 <p class="supplementary"> 
-Füge unter der Funktion Stoppuhr eine Funktion hinzu mit Namen stop(), die lauft auf "false" setzt. Lasse dich dabei von dem Aufbau der Funktion stoppuhr() inspirieren.
+Füge unter der Funktion stoppuhr() eine Funktion hinzu mit Namen stop(), die lauft auf "false" setzt. <br />
+Die erste Zeile dieser Funktion ist wie die, der Funktion stoppuhr(), aber zwischen den Klammern { } kommt hier der Befehl um lauft auf "false" zu setzen.
 </p>
 <details>
     <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
@@ -198,14 +199,19 @@ Definiere direkt unter der Funktion stop() eine Funktion start(), die <br />
 </p>
 <details>
     <summary>Tipp (Klicke auf den Pfeil falls du einen Tipp Brauchst)</summary>
-    Die Funktion start() sollte jetzt so aussehen: <br />
+    Erinnere dich daran, dass der Inhalt des Blockes
+    <span class="codeblock"> if (lauft==false){ <br />
+    <p style="text-indent: 20px; margin-bottom: -2em;"> ... </p> <br />
+    } </span>
+    nur dann ausgeführt wird, wenn lauft den Wert false hat.
+    <!-- Die Funktion start() sollte jetzt so aussehen: <br>
     <span class="codeblock"> 
-    function start(){ <br /> 
-    <p style="text-indent: 20px; margin-bottom: -2em;">if(lauft==false){ </p> <br /> 
-    <p style="text-indent: 40px; margin-bottom: -2em;">läuft = true; </p><br /> 
-    <p style="text-indent: 40px; margin-bottom: -2em">stoppuhr();</p><br /> 
-    <p style="text-indent: 20px; margin-bottom: -2em">} </p><br /> 
-    } </span> <br />
+    function start(){ <br> 
+    <p style ="text-indent: 20px; margin-bottom: -2em;">if(lauft==false){ </p> <br> 
+    <p style ="text-indent: 40px; margin-bottom: -2em;">läuft = true; </p><br> 
+    <p style ="text-indent: 40px; margin-bottom: -2em">stoppuhr();</p><br> 
+    <p style ="text-indent: 20px; margin-bottom: -2em">} </p><br> 
+    } </span> <br> -->
 </details>
 
 <h2 id="die-zeit-zurücksetzen">Die Zeit zurücksetzen</h2>
