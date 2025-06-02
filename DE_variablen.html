@@ -128,9 +128,17 @@
   </tr>
 </table>
 
+<p class="sideNote"> Der Inhalt der Webseite wird meistens mit HTML geschrieben. Mit verschiedenen Containern kann man so alle Blöcke für die Webseite erstellen. Das Aussehen verändern oder Effekte einprogrammieren kann man aber nicht direkt mit HTML machen. Für das programmieren benutzt man daher oft einen javascript code, der mit den HTML-Blöcken interagiert. So machen wir das hier auch. Darum haben wir unten einen gesonderten Abschnitt für Code. Das ist unser javascript-Abschnitt !<br />
+Für das Aussehen benutzt man in der Regel CSS, aber das sprechen wir ganz zum Schluss nochmal an. </p>
+
 <iframe src="https://trinket.io/embed/html/e0da04411b99" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen=""></iframe>
 
 <h2 id="den-namen-merken">Den Namen merken</h2>
+
+<p>Die Schreibweise ist sehr wichtig, damit der Computer dein Code versteht. Wenn du im Block rechts nicht das Resultat siehst, das du erwartest kann es sein, dass ein Fehler in der Schreibweise ist.</p>
+
+<p class="warning"> 
+Achte also besonders darauf, die Sonderzeichen wie (&lt;, &gt;, ", =, /) und die Rechtschreibung genau so hinzuschreiben, wie sie in der Aufgabestellung steht. Wenn es für dich einfacher ist, kannst du natürlich auch Kopieren und einfügen.</p>
 
 <p>Eine Variable kann zum Beispiel einen Namen speichern.</p>
 
@@ -141,7 +149,7 @@ Den zweiten Container wollen später noch verändern. Darum geben wir ihm eine <
 <!-- </p>
 <p class="supplementary">  -->
 Jetzt können wir im Code-Teil unten eine Variable erstellen. Schreibe im Code-Abschnitt die Zeile: <br />
-<span class="codeblock"> var meinName = Sophie; </span><br />
+<span class="codeblock"> var meinName = "Sophie"; </span><br />
 Die drei Fragezeichen können wir dank der id jetzt mit der Variable ersetzen. Schreibe im Code-Abschnitt die Zeile: 
 <span class="codeblock"> document.getElementById("name").innerHTML = meinName; </span><br />
 Jetzt steht auf der Webseite rechts "Sophie" statt "???" ! Versuche im Code "Sophie" durch deinen Namen zu ersetzen. Was passiert?
@@ -164,6 +172,8 @@ Variablen werden immer gleich definiert:</p>
     <td style="width: 200px;"> </td>
   </tr>
 </table>
+
+<p class="warning"> Der Computer liest den Algorithmus Zeile für Zeile von oben nach unten. Es ist also sehr wichtig die Variablen in einer Zeile zu definieren, die weiter oben kommt als dort, wo man sie benutzt. Sonst weiss der Computer nicht, dass es diese Variable gibt!</p>
 
 <p class="supplementary"> 
     1. Erstelle im Inhalt einen <span class="keyword">div</span>-Container mit dem Text "00:00" und id "uhr". <br />
